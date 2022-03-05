@@ -1,9 +1,16 @@
-# YmlFileExportTool for GoogleSpreadSheet
- 
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
- 
-"hoge"が何かを簡潔に紹介する
- 
+# YMLFileExportTool for GoogleSpreadSheet
+
+-Simple Description.  
+This script is a RPA tool to deal with YMLfiles.  
+This tool make it possible to export the contents of YMLfiles consisting of a list of dict data on GoogleSpreadSheet with GoogleSheetAPI.  
+
+It reads YMLfiles taken as arguments (when taking a directory, the script finds YMLfiles and educes keys from them, temporalily putting them into an empty list called columns. if it finish putting all keys into  And, Based on the list, it educes the values corrsponding to the keys in the list putting them into an empty list called values.
+-Details  
+
+It has mainly two parts. Tne first one is a function for GoogleAPI OAuth, enable GoogleAPI Authentification called OAuth2.0 to call GoogleSheet API.   
+
+
+
 # DEMO
  
 "hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
@@ -11,10 +18,24 @@
 # Features
  
 "hoge"のセールスポイントや差別化などを説明する
+
+# Configuration instructions
  
 # Requirement
  
-"hoge"を動かすのに必要なライブラリなどを列挙する
+Python relevant library
+import sys
+import os
+import ruamel.yaml
+import ruamel
+import gspread
+import glob
+import traceback
+
+GoogleOauth library  
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
  
 * huga 3.5.2
 * hogehuga 1.0.2
@@ -38,16 +59,14 @@ python demo.py
 ```
  
 # Note
- 
+
+As a premise, this is for YMLfiles consisting of a list of dict data.  
 注意点などがあれば書く
  
 # Author
- 
-作成情報を列挙する
- 
-* 作成者
-* 所属
-* E-mail
+
+Name Yamauchi SHIMMEI  
+E-Mail saepo12100426@gmail.com
  
 # License
 ライセンスを明示する
