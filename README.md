@@ -1,4 +1,4 @@
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
+# YmlFileExportTool for GoogleSpreadSheet
  
 分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
  
